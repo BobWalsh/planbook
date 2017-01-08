@@ -42,6 +42,15 @@ gem 'dotenv-rails', require: 'dotenv/rails-now', group: [:development, :test]
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.4'
+  gem 'capybara', '~> 2.5'
+  gem 'faker', '~> 1.6.1'
+  gem 'factory_girl_rails', '~> 4.5.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.0', require: false
+  gem 'database_cleaner', '~> 1.5'
 end
 
 group :development do
