@@ -17,7 +17,7 @@ A rails 5 prototype app created over a rainy weekend to test three things:
 * Vue.js 2 - A serious contender to React.js, so long as you don't plan on going native. In a nutshell, it's the templating js you've always wanted for Rails' views, and definitely worth learning about.
 
 
-# Running Planbook
+# Setting up Planbook
 
 1. Copy the  clone from Github to your local machine.
 2. You will need to go to Auth0.com, create a free account, create a Client ('Regular Web Application'), and copy the AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET and AUTH0_DOMAIN to a .env file in your cloned copy.
