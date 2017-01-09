@@ -1,0 +1,23 @@
+.full {
+    background: url('/assets/splash-01-cc.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height:100vh;
+}
+
+.public {
+  color: white;
+  font-weight:600;
+}
+
+.hideme {
+  visibility: hidden;
+}
+html {
+  margin-top: 55px;
+}
+.avatar {
+  width: 30%;
+}

@@ -1,8 +1,22 @@
-<h1>Dashboard#show</h1>
-<p>Find me in app/views/dashboard/show.html.erb</p>
-<div>
-  <img class="avatar" src="<%= @user[:info][:image] %>"/>
-  <h2>Welcome <%= @user[:info][:name] %></h2>
-</div>
+<div class="container-fluid">
+  <h1>Prototype Travel: Ask our Leaders a Question:</h1>
+  
+  <div class="row">
+  <div class="col-sm-4">
+    <div>
+      <img class="avatar" src="<%= @user[:info][:image] %> "/>
+      <h4>Welcome <%= @user[:info][:name] %></h4>
+    </div>
 
-<%= button_to 'Logout', logout_path, method: :delete %>
+    <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-primary"  %>
+    
+  </div>
+  <div class="col-sm-8">
+    <h4>Feel free to ask any of our Leaders who regularly travel to countries you've expressed an interest in visiting a question. Some typical questions include, 'what should I pack?', 'What music is popular there and how do I listen to it?', 'What customs/laws should I be particularly aware of?
+      '</h4>
+  </div>
+</div>
+  
+  
+
+<div>
