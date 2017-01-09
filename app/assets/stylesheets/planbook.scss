@@ -19,5 +19,118 @@ html {
   margin-top: 55px;
 }
 .avatar {
-  width: 30%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-img{
+    margin-top: -5px;
+    margin-right: 5px;
+    float: left;
+    // background: url(example.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background-size: auto 10%; /* Interchange this value depending on prefering width vs. height */
+    width: 30px;
+    height: 30px;
+}
+
+.text-input {
+  border: 1px solid #dedede;
+  padding-left: 10px;
+  width: 70%;
+  height: 35px;
+  color: #555;
+}
+
+.margin-above {
+  margin-top: 40px;
+}
+
+label {
+  font-size: 18px;
+}
+
+ul {
+  padding-left: 0px;
+}
+.list li {
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0px;
+}
+.list li > .delete {
+  float: right;
+}
+.list li:hover > .delete {
+  /* Show the delete button when hovering over each list item */
+  visibility: visible;  
+}
+
+
+form {
+  display: inline-block;
+  margin-left:200px;
+}
+
+// profiles
+.g-hover-card {
+  position: relative;  
+  text-align: center;
+  background-color: #fff;
+  opacity: .5;
+}
+.g-hover-card:hover {
+  opacity: 1;
+  border-style: dashed; border-width: 1px; box-sizing: border-box;
+
+}
+
+.g-hover-card img {
+  width: 280px;
+  height: 135px;
+}
+
+.g-hover-card .user-avatar {
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+}
+
+.g-hover-card .user-avatar img {
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.g-hover-card .info {
+  padding: 4px 8px 10px;
+}
+
+.g-hover-card  .info.title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+}
+
+.g-hover-card  .info.description{
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+.g-hover-card .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+.g-hover-card{
+  width: 280px;
+  padding-top: 0;
+  overflow: hidden;
 }

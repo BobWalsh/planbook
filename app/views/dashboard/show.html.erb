@@ -1,22 +1,133 @@
 <div class="container-fluid">
-  <h1>Prototype Travel: Ask our Leaders a Question:</h1>
+  <div class="row margin-above">
   
-  <div class="row">
-  <div class="col-sm-4">
-    <div>
-      <img class="avatar" src="<%= @user[:info][:image] %> "/>
-      <h4>Welcome <%= @user[:info][:name] %></h4>
-    </div>
-
-    <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-primary"  %>
-    
-  </div>
   <div class="col-sm-8">
-    <h4>Feel free to ask any of our Leaders who regularly travel to countries you've expressed an interest in visiting a question. Some typical questions include, 'what should I pack?', 'What music is popular there and how do I listen to it?', 'What customs/laws should I be particularly aware of?
-      '</h4>
-  </div>
+    <h1>Prototype Travel: Ask our Leaders a Question:</h1>
+    <h4>Feel free to ask any of our Leaders a travel question. Some typical questions include, 'what should I pack?', 'What music is popular there and how do I listen to it?', 'What customs/laws should I be particularly aware of?'</h4>
+    
+    <div id="app">
+      <div class="profilelist">
+        <div class="profile" v-for="person in profiles">
+          <h3>{{person.name}}</h3>
+          <%= @country.to_s %>
+        </div>
+      </div>
+      <div class="row">
+	<div class="col-md-4 ">
+		<div class="g-hover-card">
+		<img src="http://lorempixel.com/400/200/sports/1/" alt="">
+		<div class="user-avatar">
+		   <img src="http://bootdey.com/img/Content/user_6.jpg" alt="">
+		</div>
+		<div class="info">
+      <div class="description">Dey-Dey</div>
+		   <div class="title">
+			  Travel Leader in:<br/> <strong><%= random_country %></strong>
+		   </div>
+		</div>
+    	<div class="bottom">
+		   <a href="#" class="btn btn-info btn-xs">
+           <i class="fa fa-twitter"></i>
+			  Twitter
+		   </a>
+		   <a href="#" class="btn btn-primary btn-xs">
+           <i class="fa fa-facebook"></i>
+			  Facebook
+		   </a>
+		   <a href="https://plus.google.com/+Bootdey-bootstrap/posts" class="btn btn-danger btn-xs">
+           <i class="fa fa-google-plus"></i>
+			  Google +
+		   </a>
+		</div>
+	 </div>
+	</div>
+	<div class="col-md-4 ">
+		<div class="g-hover-card">				
+		<img src="http://lorempixel.com/400/200/abstract/1/" alt="">
+		<div class="user-avatar">
+		   <img src="http://bootdey.com/img/Content/user_1.jpg" alt="">
+		</div>
+		<div class="info">
+      <div class="description">Mark</div>
+		   <div class="title">
+			  Travel Leader in:<br/> <strong><%= random_country %></strong>
+		   </div>
+		</div>
+		<div class="bottom">
+		   <a href="#" class="btn btn-info btn-xs">
+           <i class="fa fa-twitter"></i>
+			  Twitter
+		   </a>
+		   <a href="#" class="btn btn-primary btn-xs">
+           <i class="fa fa-facebook"></i>
+			  Facebook
+		   </a>
+		   <a href="https://plus.google.com/+Bootdey-bootstrap/posts" class="btn btn-danger btn-xs">
+           <i class="fa fa-google-plus"></i>
+			  Google +
+		   </a>
+		</div>
+	 </div>
+	</div>
+	<div class="col-md-4 ">
+		<div class="g-hover-card">
+		<img src="http://lorempixel.com/400/200/abstract/6/" alt="">
+		<div class="user-avatar">
+		   <img src="http://bootdey.com/img/Content/user_3.jpg" alt="">
+		</div>
+		<div class="info">
+      <div class="description">Mario</div>
+		   <div class="title">
+			  Travel Leader in:<br/> <strong><%= random_country %></strong>
+		   </div>
+		</div>
+    	<div class="bottom">
+		   <a href="#" class="btn btn-info btn-xs">
+           <i class="fa fa-twitter"></i>
+			  Twitter
+		   </a>
+		   <a href="#" class="btn btn-primary btn-xs">
+           <i class="fa fa-facebook"></i>
+			  Facebook
+		   </a>
+		   <a href="https://plus.google.com/+Bootdey-bootstrap/posts" class="btn btn-danger btn-xs">
+           <i class="fa fa-google-plus"></i>
+			  Google +
+		   </a>
+		</div>
+	 </div>
+	</div>
 </div>
-  
-  
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h1>Make your Packing List</h1>
+    <!-- Main Div Holding our Application Data -->
+    <div class="container" id="todo">
+      <!-- Panel for holding our input -->
+      <section class="panel">
+        <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" v-on:click="selectAll">
+        <input type="text" placeholder="What do you need to pack?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
+        <button class='btn btn-info' v-on:click="clearList">Clear List</button>
+      </section>
 
-<div>
+      <!-- Unordered list for holding our todo items -->
+      <ul class="list">
+        <li v-for="task in taskList" v-bind:class="{done: task.checked}">
+          <input type="checkbox" class="checkbox" v-model="task.checked">
+          <label for="checkbox">{{ task.text }}</label>
+          <button class="delete btn btn-danger btn-xs" v-on:click="removeTask(task)">X</button>
+        </li>
+      </ul>
+      <!-- This stringifies the contents of the data object and displays it on the page -->
+      <!-- <pre>{{ $data }}</pre> -->
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button class="btn btn-success btn-xs" >Email me this List</button>
+        <%= button_to 'Logout', logout_path, method: :delete, class: "btn btn-primary btn-xs"  %>
+      </div>
+
+
+    
+    </div>
+    </div>
+  </div>
