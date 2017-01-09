@@ -80,7 +80,7 @@ form {
 }
 .g-hover-card:hover {
   opacity: 1;
-  border-style: dashed; border-width: 1px; box-sizing: border-box;
+  // border-style: dashed; border-width: 1px; box-sizing: outline;
 
 }
 
@@ -133,4 +133,9 @@ form {
   width: 280px;
   padding-top: 0;
   overflow: hidden;
+}
+.g-hover-card .statement {
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

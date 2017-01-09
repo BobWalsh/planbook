@@ -62,7 +62,42 @@ new Vue({
   data: {
     message: 'Hello Vue.js!',
     profiles: [
-      {"name": "Bob Walsh"}
+      {
+        "name": "Jürgen Jaeger",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/sports/1/",
+        'profileimage': "http://lorempixel.com/200/200/people/1/"
+      },
+      {
+        "name": "Peter L. Herrera",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/nature/2/",
+        'profileimage': "http://lorempixel.com/200/200/people/2/"
+      },
+      {
+        "name": "Christine F. Berg",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/sports/3/",
+        'profileimage': "http://lorempixel.com/200/200/people/3/"
+      },
+      {
+        "name": "Rhonda Johnson",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/nature/5/",
+        'profileimage': "http://lorempixel.com/200/200/people/5/"
+      },
+      {
+        "name": "Aya Doyon",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/sports/6/",
+        'profileimage': "http://lorempixel.com/200/200/people/6/"
+      },
+      {
+        "name": "Blanche P. Shaw",
+        'statement': "This is my statement. I love to travel and lead groups of people to new places.",
+        'background': "http://lorempixel.com/400/200/nature/7/",
+        'profileimage': "http://lorempixel.com/200/200/people/7/"
+      }
     ]
   }
 })
